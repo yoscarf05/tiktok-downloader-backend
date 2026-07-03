@@ -407,7 +407,7 @@
             resultSection.style.display = 'none';
 
             try {
-                // REEMPLAZA ESTA URL CON TU ENLACE PROPIO DE RENDER ACTUALIZADO
+                //https://tiktok-downloader-frontend-git-main-yoscarf05s-projects.vercel.app
                 const response = await fetch('https://tiktok-downloader-api-0251.onrender.com/api/download', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
