@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>⚡ TikTok Downloader HD - Descargar Videos sin Marca de Agua</title>
-    <meta name="description" content="La mejor herramienta online y gratuita para descargar videos de TikTok en alta definición (HD) sin marca de agua. Más de 50 guías de edición, trucos y soluciones.">
+    <meta name="description" content="La mejor herramienta online y gratuita para descargar videos de TikTok en alta definición (HD) sin marca de agua. Rápido, seguro y compatible con iPhone y Android.">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281772257761582" crossorigin="anonymous"></script>
     <style>
@@ -16,56 +16,56 @@
         nav a:hover { color: #ff0050; }
 
         .hero-section { display: flex; justify-content: center; align-items: center; flex-direction: column; min-height: 60vh; padding: 40px 20px; text-align: center; }
-        .container { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 40px 30px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); max-width: 550px; width: 100%; margin-bottom: 20px; }
-        h1 { font-size: 36px; font-weight: 800; margin-bottom: 12px; background: linear-gradient(45deg, #ff0050, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .hero-section p { color: #b3b3b3; font-size: 15px; margin-bottom: 30px; }
-        input { width: 100%; padding: 18px 20px; border-radius: 14px; border: 2px solid rgba(255, 255, 255, 0.1); background: #161224; color: white; font-size: 15px; outline: none; margin-bottom: 20px; }
+        .container { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 40px 30px; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); max-width: 580px; width: 100%; margin-bottom: 20px; }
+        h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; background: linear-gradient(45deg, #ff0050, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-section p { color: #b3b3b3; font-size: 15px; margin-bottom: 25px; }
+        
+        /* Input con botón pegar */
+        .input-wrapper { display: flex; gap: 10px; margin-bottom: 20px; }
+        input { flex: 1; padding: 16px 18px; border-radius: 14px; border: 2px solid rgba(255, 255, 255, 0.1); background: #161224; color: white; font-size: 14px; outline: none; }
         input:focus { border-color: #ff0050; box-shadow: 0 0 15px rgba(255, 0, 80, 0.4); }
-        button { background: linear-gradient(135deg, #ff0050 0%, #cc0044 100%); color: white; border: none; padding: 18px; font-size: 16px; font-weight: 600; border-radius: 14px; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4); transition: 0.3s; }
-        button:hover { filter: brightness(1.2); }
+        .btn-paste { background: #00f2fe; color: #0f0c1b; border: none; padding: 0 20px; border-radius: 14px; font-weight: 700; cursor: pointer; transition: 0.3s; white-space: nowrap; }
+        .btn-paste:hover { filter: brightness(1.2); }
+
+        .btn-download { background: linear-gradient(135deg, #ff0050 0%, #cc0044 100%); color: white; border: none; padding: 18px; font-size: 16px; font-weight: 600; border-radius: 14px; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(255, 0, 80, 0.4); transition: 0.3s; }
+        .btn-download:hover { filter: brightness(1.2); }
         
         .loader { display: none; margin: 20px auto 0; width: 40px; height: 40px; border: 4px solid rgba(255, 255, 255, 0.1); border-top-color: #00f2fe; border-radius: 50%; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        .result { margin-top: 30px; display: none; }
-        .download-btn { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); text-decoration: none; display: block; padding: 16px; border-radius: 14px; color: #0f0c1b; font-weight: 600; text-align: center; }
+        .result { margin-top: 25px; display: none; }
+        .download-btn-action { background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%); text-decoration: none; display: block; padding: 16px; border-radius: 14px; color: #0f0c1b; font-weight: 700; text-align: center; }
 
         section { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
         h2 { font-size: 28px; text-align: center; margin-bottom: 40px; }
 
-        /* Estilos de la sección Cómo Funciona con imágenes automáticas */
+        /* Estilos ajustados para los pasos con las imágenes */
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .step-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 16px; text-align: center; }
-        .step-img { width: 100%; height: 160px; border-radius: 12px; margin-bottom: 15px; background: #161224; display: flex; align-items: center; justify-content: center; font-size: 50px; border: 1px dashed rgba(255,255,255,0.1); position: relative; overflow: hidden; }
+        .step-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 20px; text-align: center; }
         
-        /* Sistema de pestañas y buscador para las 50+ guías */
-        .blog-controls { display: flex; flex-direction: column; gap: 15px; margin-bottom: 30px; align-items: center; }
-        .search-bar { max-width: 500px; margin-bottom: 0; }
-        .filter-tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-        .tab-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #b3b3b3; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-size: 13px; transition: 0.3s; }
-        .tab-btn.active, .tab-btn:hover { background: #ff0050; color: white; border-color: #ff0050; }
+        .step-img-wrapper { position: relative; width: 100%; max-width: 260px; height: 260px; margin: 0 auto 20px auto; border-radius: 16px; overflow: hidden; border: 2px solid rgba(255,255,255,0.1); background: #120e24; display: flex; align-items: center; justify-content: center; }
+        .step-img-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Círculo señalizador sobre la imagen */
+        .step-badge { position: absolute; top: 12px; left: 12px; width: 36px; height: 36px; background: #ff0050; border: 3px solid #ffffff; color: white; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.5); font-size: 16px; z-index: 10; }
+
+        .step-card h3 { font-size: 18px; margin-bottom: 10px; color: #00f2fe; }
+        .step-card p { color: #b3b3b3; font-size: 13.5px; }
 
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .blog-card { background: rgba(255, 255, 255, 0.02); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; }
-        .blog-card:hover { transform: translateY(-5px); border-color: #00f2fe; }
-        .blog-info { padding: 20px; }
-        .blog-tag { font-size: 11px; background: rgba(0, 242, 254, 0.1); color: #00f2fe; padding: 3px 8px; border-radius: 10px; font-weight: bold; display: inline-block; margin-bottom: 10px; text-transform: uppercase; }
-        .blog-info h3 { font-size: 16px; margin-bottom: 10px; }
-        .blog-info p { color: #b3b3b3; font-size: 13px; }
-        .read-more-btn { background: none; border: none; color: #ff0050; font-weight: 600; cursor: pointer; text-align: left; padding: 15px 20px; font-size: 14px; width: auto; box-shadow: none; }
-
-        /* Ventana Flotante (Modal) para leer los artículos completos */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: #120e24; border: 1px solid rgba(255,255,255,0.1); padding: 30px; border-radius: 20px; max-width: 650px; width: 100%; max-height: 80vh; overflow-y: auto; position: relative; }
-        .close-modal { position: absolute; top: 15px; right: 20px; font-size: 28px; cursor: pointer; color: #b3b3b3; }
-        .close-modal:hover { color: #ff0050; }
-        .modal-body h3 { font-size: 22px; margin-bottom: 15px; color: #00f2fe; }
-        .modal-body div { color: #d9d9d9; font-size: 14px; white-space: pre-line; }
+        .blog-card { background: rgba(255, 255, 255, 0.02); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); padding: 25px; transition: 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); border-color: #ff0050; }
+        .blog-tag { font-size: 11px; background: rgba(255, 0, 80, 0.15); color: #ff0050; padding: 4px 10px; border-radius: 10px; font-weight: bold; display: inline-block; margin-bottom: 12px; text-transform: uppercase; }
+        .blog-card h3 { font-size: 17px; margin-bottom: 10px; color: #fff; }
+        .blog-card p { color: #b3b3b3; font-size: 13px; margin-bottom: 18px; }
+        .blog-link { color: #00f2fe; text-decoration: none; font-weight: 600; font-size: 14px; }
 
         .faq-item { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; margin-bottom: 15px; padding: 20px; cursor: pointer; }
         .faq-question { font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
         .faq-answer { color: #b3b3b3; font-size: 14px; margin-top: 10px; display: none; }
+        
         footer { background: #090712; padding: 40px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: #666; }
         footer a { color: #b3b3b3; text-decoration: none; margin: 0 10px; }
+        footer a:hover { color: #00f2fe; }
     </style>
 </head>
 <body>
@@ -74,7 +74,7 @@
         <div class="logo">⚡ TTDownloader HD</div>
         <nav>
             <a href="#como-funciona">¿Cómo funciona?</a>
-            <a href="#hub-contenido">Centro de Guías</a>
+            <a href="#guias">Guías de Ayuda</a>
             <a href="#faqs">Preguntas Frecuentes</a>
         </nav>
     </header>
@@ -82,179 +82,123 @@
     <div class="hero-section">
         <div class="container">
             <h1>TikTok Downloader HD</h1>
-            <p>Descarga videos de TikTok en alta definición, formato MP4 y libre de marcas de agua al instante.</p>
-            <input type="text" id="tiktokUrl" placeholder="Pega el enlace de TikTok aquí..." />
-            <button onclick="processVideo()">⚡ Descargar Ahora</button>
+            <p>Descarga cualquier video de TikTok en alta definición, formato MP4 y libre de marcas de agua en segundos.</p>
+            
+            <div class="input-wrapper">
+                <input type="text" id="tiktokUrl" placeholder="Pega el enlace de TikTok aquí..." />
+                <button type="button" class="btn-paste" onclick="pasteFromClipboard()">📋 Pegar</button>
+            </div>
+            
+            <button class="btn-download" onclick="processVideo()">⚡ Descargar Ahora</button>
+            
             <div class="loader" id="loader"></div>
+            
             <div id="resultSection" class="result">
-                <a id="downloadLink" class="download-btn" href="#">🔥 Guardar Video Sin Marca</a>
+                <a id="downloadLink" class="download-btn-action" href="#">🔥 Guardar Video Sin Marca</a>
             </div>
         </div>
-        <div style="color: #ffd700; font-size: 14px;">⭐⭐⭐⭐⭐ <span style="color:#b3b3b3;">Más de 500,000 descargas exitosas</span></div>
+        <div style="color: #ffd700; font-size: 14px;">⭐⭐⭐⭐⭐ <span style="color:#b3b3b3;">Más de 500,000 descargas realizadas</span></div>
     </div>
 
-    <!-- SECCIÓN CÓMO FUNCIONA CON IMÁGENES AUTOMÁTICAS -->
+    <!-- SECCIÓN CÓMO FUNCIONA CON LAS 3 IMÁGENES DE LOS PASOS -->
     <section id="como-funciona">
-        <h2>¿Cómo funciona la herramienta?</h2>
+        <h2>¿Cómo descargar en 3 sencillos pasos?</h2>
         <div class="steps-grid">
+            
+            <!-- PASO 1 -->
             <div class="step-card">
-                <div class="step-img">
-                    🔗
-                    <div style="position:absolute; bottom:5px; font-size:11px; color:#666;">Mockup Paso 1</div>
+                <div class="step-img-wrapper">
+                    <div class="step-badge">1</div>
+                    <img src="https://i.ibb.co/6R22zJ4/paso1.jpg" alt="Paso 1: Copiar enlace de TikTok" id="imgStep1">
                 </div>
                 <h3>1. Copia el enlace</h3>
-                <p>En la app de TikTok, toca en 'Compartir' y selecciona la opción 'Copiar enlace'.</p>
+                <p>Abre la app de TikTok, toca en 'Compartir' en tu video favorito y presiona la opción 'Copiar enlace'.</p>
             </div>
+
+            <!-- PASO 2 -->
             <div class="step-card">
-                <div class="step-img">
-                    📥
-                    <div style="position:absolute; bottom:5px; font-size:11px; color:#666;">Mockup Paso 2</div>
+                <div class="step-img-wrapper">
+                    <div class="step-badge">2</div>
+                    <img src="https://i.ibb.co/hL77b5g/paso2.jpg" alt="Paso 2: Pegar en el buscador" id="imgStep2">
                 </div>
-                <h3>2. Pégalo aquí</h3>
-                <p>Coloca el link copiado dentro del cuadro de búsqueda en la parte superior de nuestra web.</p>
+                <h3>2. Pégalo en la herramienta</h3>
+                <p>Usa nuestro botón azul 'Pegar' para colocar la URL directamente en el cuadro y presiona 'Descargar Ahora'.</p>
             </div>
+
+            <!-- PASO 3 -->
             <div class="step-card">
-                <div class="step-img">
-                    🔥
-                    <div style="position:absolute; bottom:5px; font-size:11px; color:#666;">Mockup Paso 3</div>
+                <div class="step-img-wrapper">
+                    <div class="step-badge">3</div>
+                    <img src="https://i.ibb.co/68v3fKp/paso3.jpg" alt="Paso 3: Guardar video sin marca" id="imgStep3">
                 </div>
-                <h3>3. Descarga en HD</h3>
-                <p>Haz clic en descargar y tu video se guardará en la galería limpio y sin marcas de agua.</p>
+                <h3>3. Guarda tu video HD</h3>
+                <p>Haz clic en el botón 'Guardar Video Sin Marca' para almacenar el archivo MP4 en tu teléfono o PC.</p>
             </div>
+
         </div>
     </section>
 
-    <!-- HUB DE CONTENIDO INTERACTIVO CON MÁS DE 50 GUÍAS -->
-    <section id="hub-contenido">
-        <h2>Biblioteca de Guías, Consejos y Soluciones</h2>
-        <div class="blog-controls">
-            <input type="text" id="searchArticles" class="search-bar" placeholder="Buscar entre las 50+ guías de ayuda..." onkeyup="filterArticles()" />
-            <div class="filter-tabs">
-                <button class="tab-btn active" onclick="filterCategory('all')">Todo</button>
-                <button class="tab-btn" onclick="filterCategory('guias')">Guías paso a paso</button>
-                <button class="tab-btn" onclick="filterCategory('consejos')">Consejos para Creadores</button>
-                <button class="tab-btn" onclick="filterCategory('soluciones')">Soluciones a Errores</button>
-                <button class="tab-btn" onclick="filterCategory('trucos')">Trucos de Edición</button>
+    <!-- SECCIÓN DE GUÍAS CON ENLACES HTML REALES PARA ADSENSE -->
+    <section id="guias">
+        <h2>Centro de Guías y Tutoriales</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <span class="blog-tag">iOS / iPhone</span>
+                <h3>Cómo descargar videos de TikTok en iPhone (Guía 2026)</h3>
+                <p>Aprende a guardar tus clips favoritos directamente en la app de Fotos sin bloqueos de Safari.</p>
+                <a href="guias/guardar-videos-iphone.html" class="blog-link">Leer artículo completo →</a>
             </div>
-        </div>
-        <div class="blog-grid" id="blogGrid">
-            <!-- Los artículos cargan dinámicamente aquí mediante JavaScript -->
+            
+            <div class="blog-card">
+                <span class="blog-tag">Instagram Reels</span>
+                <h3>Eliminar marcas de agua para publicar en Reels</h3>
+                <p>Evita que Instagram penalice tu contenido y pierde alcance por mantener logos de TikTok.</p>
+                <a href="guias/eliminar-marcas-reels.html" class="blog-link">Leer artículo completo →</a>
+            </div>
+
+            <div class="blog-card">
+                <span class="blog-tag">Solución de Errores</span>
+                <h3>Solución al error "Video privado o no disponible"</h3>
+                <p>Descubre por qué ocurren los errores al intentar procesar ciertos enlaces y cómo corregirlo.</p>
+                <a href="guias/guardar-videos-iphone.html" class="blog-link">Leer artículo completo →</a>
+            </div>
         </div>
     </section>
 
     <section id="faqs">
         <h2>Preguntas Frecuentes (FAQ)</h2>
         <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">¿Funciona en iPhone y Android? <span>+</span></div>
-            <div class="faq-answer">¡Totalmente! Nuestra web activa una ruta de descarga automática adaptada para el almacenamiento de cualquier dispositivo móvil.</div>
+            <div class="faq-question">¿El servicio es totalmente gratuito? <span>+</span></div>
+            <div class="faq-answer">Sí, nuestra herramienta es 100% gratuita y sin límites de descarga diaria.</div>
         </div>
         <div class="faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">¿Tiene algún límite de descarga? <span>+</span></div>
-            <div class="faq-answer">No, puedes bajar de manera ilimitada todos los videos que requieras diariamente sin pagar nada.</div>
+            <div class="faq-question">¿Funciona en iPhone y Android? <span>+</span></div>
+            <div class="faq-answer">¡Perfectamente! Nuestra plataforma fuerza la descarga directa en cualquier navegador móvil o de PC.</div>
         </div>
     </section>
 
-    <!-- VENTANA FLOTANTE PARA LEER LAS GUÍAS -->
-    <div id="articleModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeArticle()">&times;</span>
-            <div class="modal-body" id="modalBody">
-                <!-- El artículo completo se inyecta aquí -->
-            </div>
-        </div>
-    </div>
-
     <footer>
         <div>
-            <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a> | <a href="#">Contacto</a>
+            <a href="politica-de-privacidad.html">Política de Privacidad</a> | 
+            <a href="terminos-y-condiciones.html">Términos de Servicio</a> | 
+            <a href="contacto.html">Contacto</a>
         </div>
         <p style="margin-top:15px;">&copy; 2026 TTDownloader HD. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-        // BASE DE DATOS MASIVA DE LAS 50+ GUÍAS MÁS SOLICITADAS PARA SATISFACER A GOOGLE ADSENSE
-        const articlesDatabase = [
-            { id: 1, category: 'guias', tag: 'Guía', title: 'Cómo guardar videos de TikTok en la galería del iPhone', desc: 'Aprende a esquivar los bloqueos de Safari e iOS para almacenar tus clips limpios.', content: 'Paso 1: Copia el enlace del video.\nPaso 2: Pégalo en nuestro descargador en Safari.\nPaso 3: Presiona el botón de guardar. Si se abre en pantalla completa, dale al botón de compartir de Safari y selecciona "Guardar en Archivos".' },
-            { id: 2, category: 'trucos', tag: 'Truco', title: 'Cómo reutilizar videos de TikTok en Instagram Reels sin penalizaciones', desc: 'Instagram reduce el alcance si detecta logos externos. Descubre cómo limpiarlos efectivamente.', content: 'Los algoritmos de Instagram penalizan los videos que llevan marcas de agua de TikTok. Para evitar que tu cuenta pierda alcance, procesa siempre tus videos a través de nuestra plataforma antes de resubirlos a Reels. Esto mantendrá la calidad original intacta.' },
-            { id: 3, category: 'soluciones', tag: 'Solución', title: 'Solución al error de "Enlace privado o no encontrado"', desc: '¿Por qué algunos videos dan error al procesar? Aquí te enseñamos cómo solucionarlo.', content: 'Este error sucede cuando el creador original del video configuró su cuenta como privada o deshabilitó la opción de descarga en sus ajustes. Para solucionarlo, asegúrate de que el video sea público y visible para todo el mundo en la plataforma.' },
-            { id: 4, category: 'consejos', tag: 'Consejo', title: 'La mejor hora para publicar videos según el algoritmo actual', desc: 'Optimiza tus publicaciones para entrar a la sección "Para Ti" más rápido.', content: 'Las mejores horas de publicación suelen ser de 12:00 PM a 3:00 PM y de 7:00 PM a 10:00 PM. Sin embargo, revisa tus estadísticas internas de creador para ver en qué momento exacto tu audiencia específica se encuentra más activa.' },
-            { id: 5, category: 'guias', tag: 'Guía', title: 'Descargar audios de TikTok en formato MP3 de alta calidad', desc: 'Extrae las canciones en tendencia para usarlas en tus propios proyectos de edición.', content: 'Muy pronto añadiremos el botón directo de conversión. Mientras tanto, puedes procesar el video en nuestra web y usar un extractor de audio estándar para tener el MP3 limpio.' },
-            { id: 6, category: 'trucos', tag: 'Truco', title: 'Cómo eliminar el fondo de un video con técnicas de edición móvil', desc: 'Mejora la estética visual de tus clips usando aplicaciones gratuitas desde tu celular.', content: 'Utiliza herramientas de recorte inteligente en apps como CapCut. Al procesar tu archivo descargado desde nuestra web libre de logos, el software de inteligencia artificial seleccionará al sujeto de manera más limpia y precisa.' }
-        ];
-
-        // Rellenar automáticamente con guías simuladas hasta completar las 50+ requeridas para SEO masivo
-        for (let i = 7; i <= 52; i++) {
-            const cats = ['guias', 'consejos', 'soluciones', 'trucos'];
-            const chosenCat = cats[i % cats.length];
-            articlesDatabase.push({
-                id: i,
-                category: chosenCat,
-                tag: chosenCat === 'guias' ? 'Guía' : chosenCat === 'consejos' ? 'Consejo' : chosenCat === 'soluciones' ? 'Solución' : 'Truco',
-                title: `Estrategia y solución avanzada #${i}: Optimización de Contenido Viral`,
-                desc: `Guía práctica #${i} diseñada para resolver problemas frecuentes y potenciar el crecimiento de tus canales multimedia.`,
-                content: `Detalle completo de la guía de optimización número ${i}.\n\nPara maximizar los resultados de esta técnica, se recomienda descargar el contenido multimedia limpio usando nuestra herramienta de descarga en alta definición, asegurando que no queden rastros de marcas de agua que puedan afectar la puntuación del algoritmo de indexación de Google o de otras redes sociales.`
-            });
-        }
-
-        let currentCategory = 'all';
-
-        function renderArticles() {
-            const grid = document.getElementById('blogGrid');
-            grid.innerHTML = '';
-            
-            const filtered = articlesDatabase.filter(art => {
-                if (currentCategory !== 'all' && art.category !== currentCategory) return false;
-                return true;
-            });
-
-            filtered.forEach(art => {
-                grid.innerHTML += `
-                    <div class="blog-card" data-title="${art.title.toLowerCase()}" data-desc="${art.desc.toLowerCase()}">
-                        <div class="blog-info">
-                            <span class="blog-tag">${art.tag}</span>
-                            <h3>${art.title}</h3>
-                            <p>${art.desc}</p>
-                        </div>
-                        <button class="read-more-btn" onclick="openArticle(${art.id})">Leer artículo →</button>
-                    </div>
-                `;
-            });
-        }
-
-        function filterCategory(cat) {
-            currentCategory = cat;
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            renderArticles();
-        }
-
-        function filterArticles() {
-            const search = document.getElementById('searchArticles').value.toLowerCase();
-            document.querySelectorAll('.blog-card').forEach(card => {
-                const title = card.getAttribute('data-title');
-                const desc = card.getAttribute('data-desc');
-                if (title.includes(search) || desc.includes(search)) {
-                    card.style.display = 'flex';
+        // Función para pegar automáticamente el contenido del portapapeles
+        async function pasteFromClipboard() {
+            try {
+                const text = await navigator.clipboard.readText();
+                if (text) {
+                    document.getElementById('tiktokUrl').value = text;
                 } else {
-                    card.style.display = 'none';
+                    alert('El portapapeles está vacío.');
                 }
-            });
-        }
-
-        function openArticle(id) {
-            const art = articlesDatabase.find(a => a.id === id);
-            if(art) {
-                document.getElementById('modalBody').innerHTML = `
-                    <span class="blog-tag">${art.tag}</span>
-                    <h3>${art.title}</h3>
-                    <div>${art.content}</div>
-                `;
-                document.getElementById('articleModal').style.display = 'flex';
+            } catch (err) {
+                alert('Por favor, autoriza los permisos de pegado en tu navegador o pega manualmente.');
             }
-        }
-
-        function closeArticle() {
-            document.getElementById('articleModal').style.display = 'none';
         }
 
         function toggleFaq(element) {
@@ -279,7 +223,6 @@
             resultSection.style.display = 'none';
 
             try {
-                // REEMPLAZA CON LA URL REAL DE TU BACKEND EN RENDER SI LLEGA A CAMBIAR
                 const response = await fetch('https://tiktok-downloader-api-0251.onrender.com/api/download', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -299,9 +242,6 @@
                 alert('Error al conectar con el servidor.');
             }
         }
-
-        // Inicializar las guías al cargar la página
-        renderArticles();
     </script>
 </body>
 </html>
