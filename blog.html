@@ -1,300 +1,1011 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centro de Soluciones Tecnológicas, Trucos y Guías - TTDownloader HD</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #0f0c1b; color: #fff; padding: 30px 20px; line-height: 1.6; }
-        
-        header { max-width: 1100px; margin: 0 auto 40px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 22px; font-weight: 800; background: linear-gradient(45deg, #ff0050, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        nav a { color: #b3b3b3; text-decoration: none; margin-left: 20px; font-size: 14px; transition: 0.3s; }
-        nav a:hover { color: #00f2fe; }
 
-        .container { max-width: 1100px; margin: 0 auto; }
-        h1 { font-size: 30px; color: #00f2fe; text-align: center; margin-bottom: 10px; font-weight: 800; }
-        p.sub { text-align: center; color: #b3b3b3; margin-bottom: 30px; font-size: 15px; }
+<meta charset="UTF-8">
 
-        /* Buscador Inteligente */
-        .search-box { max-width: 650px; margin: 0 auto 25px auto; position: relative; }
-        .search-box input { width: 100%; padding: 18px 25px; border-radius: 16px; border: 2px solid rgba(0, 242, 254, 0.3); background: #161224; color: #fff; font-size: 15px; outline: none; transition: 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-        .search-box input:focus { border-color: #ff0050; box-shadow: 0 0 20px rgba(255, 0, 80, 0.4); }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Pestañas de Filtrado */
-        .categories { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
-        .cat-btn { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #ccc; padding: 10px 18px; border-radius: 25px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.3s; }
-        .cat-btn.active, .cat-btn:hover { background: linear-gradient(45deg, #ff0050, #cc0044); color: #fff; border-color: transparent; }
 
-        /* Chips Populares */
-        .top-searches { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); padding: 20px; border-radius: 16px; margin-bottom: 35px; }
-        .top-searches h3 { font-size: 14px; color: #ffd700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-        .chips-wrapper { display: flex; gap: 8px; flex-wrap: wrap; }
-        .chip { background: rgba(0, 242, 254, 0.1); border: 1px solid rgba(0, 242, 254, 0.2); color: #00f2fe; padding: 6px 14px; border-radius: 20px; font-size: 12px; cursor: pointer; transition: 0.3s; }
-        .chip:hover { background: #00f2fe; color: #000; }
+<title>
+Centro de Ayuda Tecnológica | Guías, Trucos y Soluciones
+</title>
 
-        /* Grid de Guías */
-        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .blog-card { background: rgba(255, 255, 255, 0.03); border-radius: 18px; border: 1px solid rgba(255, 255, 255, 0.08); padding: 22px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
-        .blog-card:hover { transform: translateY(-5px); border-color: #00f2fe; box-shadow: 0 10px 25px rgba(0, 242, 254, 0.15); }
-        .blog-tag { font-size: 11px; background: rgba(255, 0, 80, 0.15); color: #ff0050; padding: 4px 12px; border-radius: 12px; font-weight: 700; display: inline-block; margin-bottom: 12px; text-transform: uppercase; }
-        .blog-card h3 { font-size: 16px; margin-bottom: 10px; color: #fff; line-height: 1.4; }
-        .blog-card p { color: #b3b3b3; font-size: 13px; margin-bottom: 18px; }
-        .btn-read { background: transparent; border: none; color: #00f2fe; font-weight: 700; cursor: pointer; text-align: left; font-size: 13.5px; transition: 0.3s; }
-        .btn-read:hover { color: #ff0050; }
 
-        /* Modal para leer guías */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center; padding: 20px; }
-        .modal-content { background: #161224; border: 1px solid rgba(0, 242, 254, 0.3); padding: 35px; border-radius: 24px; max-width: 700px; width: 100%; max-height: 85vh; overflow-y: auto; position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
-        .close-btn { position: absolute; top: 20px; right: 25px; font-size: 28px; cursor: pointer; color: #b3b3b3; transition: 0.3s; }
-        .close-btn:hover { color: #ff0050; }
-        .modal-body h2 { font-size: 22px; color: #00f2fe; margin-bottom: 15px; }
-        .modal-body div { color: #d1d1d1; font-size: 14.5px; white-space: pre-line; line-height: 1.8; }
+<meta name="description" content="Encuentra soluciones tecnológicas sobre celulares Android, iPhone, aplicaciones, seguridad digital, redes sociales y herramientas online explicadas paso a paso.">
 
-        footer { text-align: center; margin-top: 60px; padding: 30px 0; border-top: 1px solid rgba(255,255,255,0.05); color: #666; font-size: 13px; }
-    </style>
+
+<meta name="robots" content="index, follow">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1281772257761582" crossorigin="anonymous"></script>
+
+
+
+<style>
+
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+
+
+body{
+
+background:
+
+radial-gradient(circle,#1a1a35,#0f0c1b);
+
+color:white;
+
+min-height:100vh;
+
+padding:30px 20px;
+
+}
+
+
+
+
+header{
+
+max-width:1100px;
+
+margin:auto;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:50px;
+
+}
+
+
+
+.logo{
+
+font-size:24px;
+
+font-weight:800;
+
+text-decoration:none;
+
+background:linear-gradient(45deg,#ff0050,#00f2fe);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+
+
+nav a{
+
+color:#aaa;
+
+text-decoration:none;
+
+margin-left:20px;
+
+font-size:14px;
+
+}
+
+
+
+nav a:hover{
+
+color:#00f2fe;
+
+}
+
+
+
+
+
+.container{
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+
+
+
+h1{
+
+text-align:center;
+
+font-size:36px;
+
+font-weight:800;
+
+color:#00f2fe;
+
+margin-bottom:15px;
+
+}
+
+
+
+.subtitle{
+
+text-align:center;
+
+color:#aaa;
+
+max-width:750px;
+
+margin:auto;
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+
+
+
+
+.search-box{
+
+max-width:650px;
+
+margin:40px auto 30px;
+
+}
+
+
+
+.search-box input{
+
+width:100%;
+
+padding:18px 22px;
+
+border-radius:18px;
+
+border:2px solid rgba(0,242,254,.3);
+
+background:#161224;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+}
+
+
+
+.search-box input:focus{
+
+border-color:#ff0050;
+
+}
+
+
+
+
+
+.categories{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:12px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.cat-btn{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.1);
+
+color:#ccc;
+
+padding:10px 18px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+font-weight:600;
+
+}
+
+
+
+.cat-btn.active,
+
+.cat-btn:hover{
+
+background:linear-gradient(45deg,#ff0050,#cc0044);
+
+color:white;
+
+}
+
+
+
+
+
+.info-box{
+
+background:rgba(255,255,255,.04);
+
+border:1px solid rgba(255,255,255,.1);
+
+border-radius:18px;
+
+padding:25px;
+
+margin-bottom:40px;
+
+color:#ccc;
+
+line-height:1.8;
+
+}
+
+
+
+
+.blog-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:25px;
+
+}
+
+
+
+
+
+.blog-card{
+
+background:rgba(255,255,255,.03);
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:25px;
+
+transition:.3s;
+
+}
+
+
+
+.blog-card:hover{
+
+transform:translateY(-5px);
+
+border-color:#00f2fe;
+
+}
+
+
+
+.tag{
+
+display:inline-block;
+
+font-size:12px;
+
+padding:5px 12px;
+
+border-radius:20px;
+
+background:rgba(255,0,80,.15);
+
+color:#ff0050;
+
+margin-bottom:15px;
+
+font-weight:bold;
+
+}
+
+
+
+.blog-card h2{
+
+font-size:19px;
+
+margin-bottom:12px;
+
+}
+
+
+
+.blog-card p{
+
+font-size:14px;
+
+color:#aaa;
+
+margin-bottom:20px;
+
+}
+
+
+
+.read-btn{
+
+color:#00f2fe;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+
+
+footer{
+
+margin-top:70px;
+
+padding:30px;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+text-align:center;
+
+color:#777;
+
+font-size:14px;
+
+}
+
+
+
+</style>
+
+
 </head>
+
+
+
 <body>
 
-    <header>
-        <a href="index.html" class="logo">⚡ TTDownloader HD</a>
-        <nav>
-            <a href="index.html">Descargador</a>
-            <a href="blog.html" style="color:#00f2fe; font-weight:bold;">Centro de Guías</a>
-        </nav>
-    </header>
 
-    <div class="container">
-        <h1>Centro de Soluciones Tecnológicas y Trucos</h1>
-        <p class="sub">Busca entre nuestras más de 50 guías paso a paso para celulares, redes sociales y optimización.</p>
 
-        <!-- BUSCADOR INTELIGENTE -->
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="🔍 Buscar truco o solución (ej. formatear, WhatsApp, memoria, batería, iPhone)..." onkeyup="smartSearch()" />
-        </div>
+<header>
 
-        <!-- LO MÁS BUSCADO EN GOOGLE -->
-        <div class="top-searches">
-            <h3>🔥 Búsquedas más populares del día a día:</h3>
-            <div class="chips-wrapper">
-                <span class="chip" onclick="quickSearch('Formatear')">📲 Formatear celular</span>
-                <span class="chip" onclick="quickSearch('Memoria')">🧹 Liberar espacio</span>
-                <span class="chip" onclick="quickSearch('WhatsApp')">💬 Trucos de WhatsApp</span>
-                <span class="chip" onclick="quickSearch('Fotos')">🖼️ Recuperar fotos</span>
-                <span class="chip" onclick="quickSearch('Batería')">🔋 Ahorrar batería</span>
-                <span class="chip" onclick="quickSearch('Lento')">⚡ Celular lento</span>
-            </div>
-        </div>
 
-        <!-- PESTAÑAS DE CATEGORÍA -->
-        <div class="categories">
-            <button class="cat-btn active" onclick="filterCategory('all', this)">🔥 Todo (50+ Guías)</button>
-            <button class="cat-btn" onclick="filterCategory('celulares', this)">📲 Celulares & Android/iOS</button>
-            <button class="cat-btn" onclick="filterCategory('redes', this)">💬 WhatsApp & Redes</button>
-            <button class="cat-btn" onclick="filterCategory('edicion', this)">🎨 Edición & Multimedia</button>
-            <button class="cat-btn" onclick="filterCategory('errores', this)">⚠️ Solución de Errores</button>
-        </div>
+<a href="index.html" class="logo">
+⚡ TTDownloader HD
+</a>
 
-        <!-- GRID DONDE SE CARGAN LAS GUÍAS -->
-        <div class="blog-grid" id="guidesGrid"></div>
-    </div>
 
-    <!-- MODAL FLOTANTE -->
-    <div id="guideModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <div class="modal-body" id="modalContent"></div>
-        </div>
-    </div>
+<nav>
 
-    <footer>
-        <p>&copy; 2026 TTDownloader HD. Portal de Ayuda y Tutoriales Tecnológicos.</p>
-    </footer>
+<a href="index.html">
+Herramienta
+</a>
+
+
+<a href="blog.html">
+Guías
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<div class="container">
+
+
+
+<h1>
+Centro de Ayuda Tecnológica
+</h1>
+
+
+<p class="subtitle">
+
+Aprende a solucionar problemas comunes de tecnología con guías prácticas sobre teléfonos móviles, aplicaciones, redes sociales, seguridad digital y herramientas online.
+
+</p>
+
+
+
+
+
+<div class="search-box">
+
+<input 
+
+type="text"
+
+id="searchInput"
+
+placeholder="🔍 Buscar solución: batería, iPhone, WhatsApp, WiFi..."
+
+onkeyup="searchGuides()"
+
+/>
+
+</div>
+
+
+
+
+
+<div class="categories">
+
+
+<button class="cat-btn active">
+Todas
+</button>
+
+
+<button class="cat-btn">
+📱 Celulares
+</button>
+
+
+<button class="cat-btn">
+💬 Aplicaciones
+</button>
+
+
+<button class="cat-btn">
+🌐 Internet
+</button>
+
+
+<button class="cat-btn">
+⚙️ Soluciones
+</button>
+
+
+</div>
+
+
+
+
+
+<div class="info-box">
+
+
+<strong>
+📚 Sobre este centro de ayuda
+</strong>
+
+
+<br><br>
+
+
+Aquí encontrarás información creada para ayudar a usuarios a resolver dudas tecnológicas de forma sencilla. Nuestro objetivo es explicar procesos digitales paso a paso para que cualquier persona pueda aprender y aprovechar mejor sus dispositivos.
+
+
+
+</div>
+
+
+
+
+
+<div class="blog-grid" id="guidesGrid">
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<footer>
+
+
+© 2026 TTDownloader HD - Centro de Ayuda Tecnológica
+
+
+</footer>
 
     <script>
-        // BASE DE DATOS COMPLETA CON LAS 50+ GUÍAS REALES
-        const rawGuides = [
-            // CATEGORÍA: CELULARES & ANDROID / IOS
-            { id: 1, category: 'celulares', tag: 'Celulares', title: 'Cómo formatear tu celular Android de fábrica correctamente', desc: 'Paso a paso para borrar todo de forma segura sin perder tu cuenta de Google.', content: `Formatear el celular ayuda a solucionar lentitud extrema y virus.
+       const guides = [
 
-📌 Pasos antes de formatear:
-1. Ve a Ajustes > Cuentas y elimina tu cuenta de Google (para evitar el bloqueo FRP).
-2. Haz una copia de seguridad de tus fotos y chats de WhatsApp.
-3. Entra a Ajustes > Sistema > Opciones de restablecimiento > Restablecer datos de fábrica.
-4. Confirma con tu PIN y espera a que el dispositivo reinicie.` },
+{
+id:1,
+category:"celulares",
+tag:"Android",
+title:"Cómo liberar espacio en un celular Android sin borrar fotos importantes",
+desc:"Aprende a recuperar almacenamiento eliminando archivos innecesarios y optimizando aplicaciones.",
+content:`
+Cuando un teléfono Android empieza a quedarse sin espacio, normalmente se debe a archivos temporales, aplicaciones con muchos datos acumulados y archivos descargados.
 
-            { id: 2, category: 'celulares', tag: 'Celulares', title: 'Cómo recuperar fotos borradas de la galería en Android e iPhone', desc: 'Métodos eficientes para rescatar imágenes eliminadas por accidente.', content: `Si borraste fotos importantes, prueba estos métodos antes de darlo por perdido:
+Pasos recomendados:
 
-1. Revisa la Papelera de la Galería: En la mayoría de teléfonos las fotos permanecen 30 días en la papelera.
-2. Google Fotos / iCloud: Entra a la web de Google Fotos (photos.google.com) o iCloud.com y revisa la sección de Eliminados Recientemente.
-3. Usa la app DiskDigger en Android para escanear la memoria interna sin necesidad de root.` },
+1. Abre Ajustes > Almacenamiento para revisar qué está ocupando más espacio.
 
-            { id: 3, category: 'celulares', tag: 'Celulares', title: 'Trucos para duplicar la duración de la batería en tu Smartphone', desc: 'Ajustes esenciales en Android e iOS para evitar que la batería se agote rápido.', content: `Ajustes recomendados para extender la autonomía:
+2. Elimina archivos descargados que ya no utilices.
 
-1. Desactiva la búsqueda de Wi-Fi y Bluetooth en segundo plano.
-2. Reduce la frecuencia de actualización de pantalla de 120Hz a 60Hz.
-3. Activa el Modo Oscuro (especialmente útil en pantallas AMOLED).
-4. Limita la ubicación GPS solo a aplicaciones necesarias.` },
+3. Limpia la memoria caché de aplicaciones como Chrome, TikTok, Instagram o WhatsApp.
 
-            { id: 4, category: 'celulares', tag: 'Celulares', title: 'Cómo liberar espacio de almacenamiento sin borrar tus fotos', desc: 'Elimina gigabytes de archivos basura e invisibles que ocupan tu memoria.', content: `Si tu almacenamiento está lleno, elimina la basura oculta:
+4. Revisa Google Fotos y activa la copia de seguridad antes de eliminar imágenes.
 
-1. Limpia la caché de WhatsApp: Entra a WhatsApp > Ajustes > Almacenamiento y datos > Administrar almacenamiento.
-2. Borra la caché de aplicaciones como TikTok, Instagram y Chrome desde Ajustes > Aplicaciones.
-3. Elimina la carpeta "Telegram Documents" si usas esa app de mensajería.` },
+Consejo:
+Evita instalar aplicaciones que prometen limpiar el teléfono automáticamente, ya que algunas pueden consumir más recursos.
+`
+},
 
-            { id: 5, category: 'celulares', tag: 'Celulares', title: 'Cómo acelerar un celular lento o trabado en 3 sencillos pasos', desc: 'Activa las opciones de desarrollador para hacer volar las animaciones del sistema.', content: `Haz tu teléfono mucho más fluido al instante:
 
-1. Ve a Ajustes > Acerca del teléfono y presiona 7 veces seguidas sobre 'Número de compilación'.
-2. Regresa y entra a 'Opciones de desarrollador'.
-3. Busca 'Escala de animación de ventana', 'transición' y 'durador' y cámbialas de 1x a 0.5x o Desactivadas.` },
+{
+id:2,
+category:"celulares",
+tag:"iPhone",
+title:"Cómo mejorar la duración de batería en iPhone",
+desc:"Configuraciones útiles para reducir el consumo de batería durante el día.",
+content:`
+La duración de batería depende del brillo, aplicaciones en segundo plano y conexiones activas.
 
-            // CATEGORÍA: WHATSAPP & REDES SOCIALES
-            { id: 6, category: 'redes', tag: 'WhatsApp', title: 'Cómo leer mensajes borrados de WhatsApp sin instalar apps raras', desc: 'Aprovecha el historial de notificaciones nativo de tu teléfono.', content: `Si alguien borró un mensaje en WhatsApp antes de que lo leyeras:
+Recomendaciones:
 
-1. Ve a Ajustes > Notificaciones > Historial de notificaciones en tu Android.
-2. Activa la casilla 'Usar historial de notificaciones'.
-3. A partir de ese momento, todos los mensajes recibidos quedarán registrados allí incluso si los borran en el chat.` },
+1. Activa el brillo automático.
 
-            { id: 7, category: 'redes', tag: 'Redes', title: 'Cómo subir fotos a Instagram Stories sin perder calidad ni nitidez', desc: 'Ajuste secreto de Instagram para evitar que la app comprima tus imágenes.', content: `Instagram comprime las fotos si no tienes esta opción configurada:
+2. Revisa qué aplicaciones consumen más energía desde Ajustes > Batería.
 
-1. Abre Instagram y ve a tu Perfil.
-2. Toca las 3 líneas de la esquina superior > Configuración y privacidad.
-3. Busca 'Uso de datos y calidad de medios'.
-4. Activa la casilla 'Subir con la calidad más alta'.` },
+3. Desactiva la actualización en segundo plano de apps que no utilizas.
 
-            { id: 8, category: 'redes', tag: 'WhatsApp', title: 'Cómo transferir tus chats de WhatsApp de Android a iPhone gratis', desc: 'Guía definitiva usando la herramienta oficial para no perder nada.', content: `Para pasar tus chats sin pagar programas de terceros:
+4. Mantén actualizado el sistema operativo.
 
-1. Descarga la app 'Trasladar a iOS' en tu celular Android desde Google Play.
-2. Enciende el iPhone nuevo en la pantalla de configuración inicial.
-3. Selecciona 'Transferir datos desde Android' y sigue los pasos en pantalla indicando la transferencia de WhatsApp.` },
+También es recomendable evitar temperaturas extremas, ya que pueden afectar el rendimiento de la batería.
+`
+},
 
-            { id: 9, category: 'redes', tag: 'Redes', title: 'Cómo saber quién no te devuelve el follow en Instagram', desc: 'Aprende a revisar tus seguidores de forma segura sin arriesgar tu cuenta.', content: `Evita usar apps externas de unfollowers que piden tu clave, ya que provocan baneos.
 
-Método seguro: Descarga tus datos desde Configuración > Tu actividad > Descargar tu información. Abre los archivos 'followers.html' y 'following.html' y compáralos en Excel o un navegador.` },
+{
+id:3,
+category:"aplicaciones",
+tag:"WhatsApp",
+title:"Cómo proteger tu cuenta de WhatsApp con seguridad adicional",
+desc:"Activa funciones de seguridad para evitar accesos no autorizados.",
+content:`
+WhatsApp cuenta con herramientas para mejorar la privacidad de tu cuenta.
 
-            { id: 10, category: 'redes', tag: 'Redes', title: 'Cómo quitar la marca de agua de videos para subirlos a Reels y Shorts', desc: 'Usa nuestra herramienta principal para limpiar tus publicaciones.', content: `Las redes sociales reducen la visibilidad de los videos que contienen marcas externas.
+Pasos:
 
-Simplemente copia el enlace de tu publicación, pégalo en nuestro descargador principal en la portada de esta web y guarda el archivo MP4 totalmente limpio.` },
+1. Entra en WhatsApp > Ajustes.
 
-            // CATEGORÍA: EDICIÓN & MULTIMEDIA
-            { id: 11, category: 'edicion', tag: 'Edición', title: 'Cómo editar videos en CapCut como un profesional desde el celular', desc: 'Trucos de corte, transiciones y efectos de sonido tendencia.', content: `Mejora la calidad de tus ediciones para redes sociales:
+2. Selecciona Cuenta.
 
-1. Elimina la marca de agua final de CapCut deslizando al último cuadro del proyecto y presionando eliminar.
-2. Usa el efecto 'Enfoque inteligente' para resaltar al sujeto.
-3. Exporta siempre en 1080p a 60 cuadros por segundo para evitar saltos de imagen.` },
+3. Activa la verificación en dos pasos.
 
-            { id: 12, category: 'edicion', tag: 'Multimedia', title: 'Cómo convertir cualquier video en formato MP3 de audio de alta calidad', desc: 'Extrae el sonido o canción de tus clips de manera sencilla.', content: `Extrae canciones o diálogos virales para usarlos en tus ediciones descargando el video completo en nuestra herramienta y utilizando la función de 'Extraer Audio' disponible en aplicaciones gratuitas como CapCut o InShot.` },
+4. Revisa periódicamente los dispositivos conectados.
 
-            { id: 13, category: 'edicion', tag: 'Edición', title: 'Cómo quitar el fondo de una imagen gratis y sin instalar nada', desc: 'Herramientas online para crear PNG transparentes en segundos.', content: `Para crear stickers o miniaturas de calidad, utiliza plataformas automáticas de inteligencia artificial como remove.bg o la función integrada de recorte automático en la Galería de iOS o Android.` },
+Nunca compartas códigos recibidos por SMS, incluso si alguien dice representar a WhatsApp.
+`
+},
 
-            // CATEGORÍA: SOLUCIÓN DE ERRORES
-            { id: 14, category: 'errores', tag: 'Errores', title: 'Solución al error "Google Play Store se detuvo" o no descarga apps', desc: 'Pasos para restablecer la tienda de aplicaciones de Android.', content: `Si la Play Store se queda descargando infinitamente o se cierra solo:
 
-1. Ve a Ajustes > Aplicaciones > Google Play Store.
-2. Toca en 'Almacenamiento' y presiona 'Borrar Caché' y 'Borrar Datos'.
-3. Realiza el mismo procedimiento con 'Servicios de Google Play'.
-4. Reinicia el teléfono e intenta descargar de nuevo.` },
+{
+id:4,
+category:"internet",
+tag:"WiFi",
+title:"Solución cuando el celular se desconecta del WiFi constantemente",
+desc:"Métodos para resolver problemas comunes de conexión inalámbrica.",
+content:`
+Si tu teléfono pierde la conexión WiFi frecuentemente puedes probar:
 
-            { id: 15, category: 'errores', tag: 'Errores', title: 'Qué hacer si tu celular no detecta la red Wi-Fi o se desconecta solo', desc: 'Soluciona problemas de conectividad de red de forma rápida.', content: `Pasos para arreglar fallos de Wi-Fi:
+1. Reiniciar el router y esperar unos segundos.
 
-1. Activa el Modo Avión durante 10 segundos y desactívalo.
-2. Ve a Ajustes > Redes móviles/Wi-Fi > Restablecer ajustes de red.
-3. Reinicia tu router de internet desconectándolo de la corriente por 30 segundos.` }
-        ];
+2. Olvidar la red WiFi desde los ajustes del teléfono y volver a conectarla.
 
-        // Generar dinámicamente hasta completar las 50+ guías para cubrir todas las búsquedas diarias
-        for (let i = 16; i <= 52; i++) {
-            const categories = ['celulares', 'redes', 'edicion', 'errores'];
-            const chosenCat = categories[i % categories.length];
-            
-            const titles = [
-                `Cómo solucionar el problema de pantalla negra en tu smartphone #${i}`,
-                `Truco para aumentar la velocidad de descarga de tu internet móvil #${i}`,
-                `Cómo saber si tu teléfono tiene virus y cómo eliminarlo gratis #${i}`,
-                `Guía para recuperar espacio en la memoria RAM de tu dispositivo #${i}`,
-                `Cómo activar el modo desarrollador y funciones ocultas en Android #${i}`,
-                `Solución a fallos de carga lenta en la batería de tu celular #${i}`
-            ];
+3. Reiniciar los ajustes de red del dispositivo.
 
-            rawGuides.push({
-                id: i,
-                category: chosenCat,
-                tag: chosenCat === 'celulares' ? 'Celulares' : chosenCat === 'redes' ? 'Redes Social' : chosenCat === 'edicion' ? 'Multimedia' : 'Errores',
-                title: titles[i % titles.length],
-                desc: `Guía detallada #${i} con soluciones prácticas y verificadas para optimizar tus dispositivos.`,
-                content: `En esta guía número ${i} abordamos una de las consultas más frecuentes en motores de búsqueda.\n\nSiguiendo estos sencillos procedimientos podrás solucionar fallos técnicos, mejorar el rendimiento de tus aplicaciones y mantener tu teléfono operando en óptimas condiciones sin necesidad de llevarlo a un servicio técnico.`
-            });
-        }
+4. Revisar si otros dispositivos tienen el mismo problema.
 
-        let currentCat = 'all';
+Si solamente falla un teléfono, probablemente el problema está en la configuración del dispositivo.
+`
+},
 
-        function renderGuides(data) {
-            const grid = document.getElementById('guidesGrid');
-            grid.innerHTML = '';
 
-            if (data.length === 0) {
-                grid.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #b3b3b3; padding: 40px;">No se encontraron guías para tu búsqueda. Intenta con otra palabra clave.</p>';
-                return;
-            }
+{
+id:5,
+category:"celulares",
+tag:"Fotos",
+title:"Cómo recuperar fotos borradas en Android y iPhone",
+desc:"Opciones disponibles antes de utilizar herramientas externas.",
+content:`
+Antes de intentar recuperar archivos con aplicaciones adicionales revisa:
 
-            data.forEach(item => {
-                grid.innerHTML += `
-                    <div class="blog-card">
-                        <div>
-                            <span class="blog-tag">${item.tag}</span>
-                            <h3>${item.title}</h3>
-                            <p>${item.desc}</p>
-                        </div>
-                        <button class="btn-read" onclick="openModal(${item.id})">Leer solución completa →</button>
-                    </div>
-                `;
-            });
-        }
+Android:
+- Papelera de la galería.
+- Google Fotos.
+- Copias de seguridad.
 
-        function smartSearch() {
-            const query = document.getElementById('searchInput').value.toLowerCase();
-            const filtered = rawGuides.filter(guide => {
-                const matchesCat = (currentCat === 'all' || guide.category === currentCat);
-                const matchesText = guide.title.toLowerCase().includes(query) || 
-                                    guide.desc.toLowerCase().includes(query) || 
-                                    guide.content.toLowerCase().includes(query);
-                return matchesCat && matchesText;
-            });
-            renderGuides(filtered);
-        }
+iPhone:
+- Álbum Eliminado recientemente.
+- Copias de seguridad de iCloud.
 
-        function quickSearch(keyword) {
-            document.getElementById('searchInput').value = keyword;
-            smartSearch();
-        }
+Las posibilidades de recuperación dependen del tiempo transcurrido y de si el espacio fue sobrescrito.
+`
+},
 
-        function filterCategory(cat, btn) {
-            currentCat = cat;
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            smartSearch();
-        }
 
-        function openModal(id) {
-            const guide = rawGuides.find(g => g.id === id);
-            if (guide) {
-                document.getElementById('modalContent').innerHTML = `
-                    <span class="blog-tag">${guide.tag}</span>
-                    <h2>${guide.title}</h2>
-                    <div>${guide.content}</div>
-                `;
-                document.getElementById('guideModal').style.display = 'flex';
-            }
-        }
+{
+id:6,
+category:"internet",
+tag:"Navegadores",
+title:"Cómo solucionar páginas que no cargan correctamente",
+desc:"Pasos básicos para resolver errores del navegador.",
+content:`
+Cuando una página no abre correctamente puedes intentar:
 
-        function closeModal() {
-            document.getElementById('guideModal').style.display = 'none';
-        }
+1. Revisar tu conexión a internet.
 
-        // Cargar guías al iniciar
-        renderGuides(rawGuides);
-    </script>
-</body>
-</html>
+2. Actualizar el navegador.
+
+3. Limpiar caché y cookies.
+
+4. Probar otro navegador.
+
+También verifica que la fecha y hora del dispositivo sean correctas.
+`
+},
+
+
+{
+id:7,
+category:"aplicaciones",
+tag:"TikTok",
+title:"Cómo guardar videos de TikTok en iPhone correctamente",
+desc:"Guía para usuarios de iOS que desean organizar sus archivos descargados.",
+content:`
+En iPhone algunos archivos descargados se guardan primero en la aplicación Archivos.
+
+Pasos:
+
+1. Copia el enlace del contenido.
+
+2. Procesa el archivo desde una herramienta compatible.
+
+3. Utiliza el menú compartir de Safari.
+
+4. Selecciona Guardar en Archivos o la opción disponible.
+
+Recuerda respetar los derechos de autor y utilizar contenido permitido.
+`
+},
+
+
+{
+id:8,
+category:"soluciones",
+tag:"Rendimiento",
+title:"Cómo acelerar un celular lento sin instalar aplicaciones",
+desc:"Ajustes sencillos para mejorar la respuesta del dispositivo.",
+content:`
+Para mejorar el rendimiento:
+
+1. Elimina aplicaciones que no utilizas.
+
+2. Reinicia el dispositivo periódicamente.
+
+3. Mantén suficiente espacio libre.
+
+4. Actualiza las aplicaciones importantes.
+
+Un teléfono con almacenamiento casi lleno suele funcionar más lento.
+`
+},
+
+
+{
+id:9,
+category:"soluciones",
+tag:"Seguridad",
+title:"Cómo detectar aplicaciones sospechosas en tu celular",
+desc:"Aprende señales comunes de aplicaciones poco confiables.",
+content:`
+Algunas señales de alerta:
+
+- Consumo excesivo de batería.
+- Muchos anuncios inesperados.
+- Permisos innecesarios.
+- Uso elevado de datos móviles.
+
+Revisa los permisos desde la configuración del sistema y elimina aplicaciones que no reconozcas.
+`
+},
+
+
+{
+id:10,
+category:"aplicaciones",
+tag:"Multimedia",
+title:"Cómo organizar videos y archivos para ahorrar espacio",
+desc:"Métodos para mantener tu almacenamiento ordenado.",
+content:`
+Una buena organización ayuda a evitar llenar la memoria:
+
+1. Crea carpetas por categorías.
+
+2. Elimina duplicados.
+
+3. Guarda archivos importantes en la nube.
+
+4. Revisa periódicamente la carpeta de descargas.
+
+Mantener ordenados tus archivos mejora la experiencia del dispositivo.
+`
+}
+
+];
+const guides = [
+
+{
+id:1,
+category:"celulares",
+tag:"Android",
+title:"Cómo liberar espacio en un celular Android sin borrar fotos importantes",
+desc:"Aprende a recuperar almacenamiento eliminando archivos innecesarios y optimizando aplicaciones.",
+content:`
+Cuando un teléfono Android empieza a quedarse sin espacio, normalmente se debe a archivos temporales, aplicaciones con muchos datos acumulados y archivos descargados.
+
+Pasos recomendados:
+
+1. Abre Ajustes > Almacenamiento para revisar qué está ocupando más espacio.
+
+2. Elimina archivos descargados que ya no utilices.
+
+3. Limpia la memoria caché de aplicaciones como Chrome, TikTok, Instagram o WhatsApp.
+
+4. Revisa Google Fotos y activa la copia de seguridad antes de eliminar imágenes.
+
+Consejo:
+Evita instalar aplicaciones que prometen limpiar el teléfono automáticamente, ya que algunas pueden consumir más recursos.
+`
+},
+
+
+{
+id:2,
+category:"celulares",
+tag:"iPhone",
+title:"Cómo mejorar la duración de batería en iPhone",
+desc:"Configuraciones útiles para reducir el consumo de batería durante el día.",
+content:`
+La duración de batería depende del brillo, aplicaciones en segundo plano y conexiones activas.
+
+Recomendaciones:
+
+1. Activa el brillo automático.
+
+2. Revisa qué aplicaciones consumen más energía desde Ajustes > Batería.
+
+3. Desactiva la actualización en segundo plano de apps que no utilizas.
+
+4. Mantén actualizado el sistema operativo.
+
+También es recomendable evitar temperaturas extremas, ya que pueden afectar el rendimiento de la batería.
+`
+},
+
+
+{
+id:3,
+category:"aplicaciones",
+tag:"WhatsApp",
+title:"Cómo proteger tu cuenta de WhatsApp con seguridad adicional",
+desc:"Activa funciones de seguridad para evitar accesos no autorizados.",
+content:`
+WhatsApp cuenta con herramientas para mejorar la privacidad de tu cuenta.
+
+Pasos:
+
+1. Entra en WhatsApp > Ajustes.
+
+2. Selecciona Cuenta.
+
+3. Activa la verificación en dos pasos.
+
+4. Revisa periódicamente los dispositivos conectados.
+
+Nunca compartas códigos recibidos por SMS, incluso si alguien dice representar a WhatsApp.
+`
+},
+
+
+{
+id:4,
+category:"internet",
+tag:"WiFi",
+title:"Solución cuando el celular se desconecta del WiFi constantemente",
+desc:"Métodos para resolver problemas comunes de conexión inalámbrica.",
+content:`
+Si tu teléfono pierde la conexión WiFi frecuentemente puedes probar:
+
+1. Reiniciar el router y esperar unos segundos.
+
+2. Olvidar la red WiFi desde los ajustes del teléfono y volver a conectarla.
+
+3. Reiniciar los ajustes de red del dispositivo.
+
+4. Revisar si otros dispositivos tienen el mismo problema.
+
+Si solamente falla un teléfono, probablemente el problema está en la configuración del dispositivo.
+`
+},
+
+
+{
+id:5,
+category:"celulares",
+tag:"Fotos",
+title:"Cómo recuperar fotos borradas en Android y iPhone",
+desc:"Opciones disponibles antes de utilizar herramientas externas.",
+content:`
+Antes de intentar recuperar archivos con aplicaciones adicionales revisa:
+
+Android:
+- Papelera de la galería.
+- Google Fotos.
+- Copias de seguridad.
+
+iPhone:
+- Álbum Eliminado recientemente.
+- Copias de seguridad de iCloud.
+
+Las posibilidades de recuperación dependen del tiempo transcurrido y de si el espacio fue sobrescrito.
+`
+},
+
+
+{
+id:6,
+category:"internet",
+tag:"Navegadores",
+title:"Cómo solucionar páginas que no cargan correctamente",
+desc:"Pasos básicos para resolver errores del navegador.",
+content:`
+Cuando una página no abre correctamente puedes intentar:
+
+1. Revisar tu conexión a internet.
+
+2. Actualizar el navegador.
+
+3. Limpiar caché y cookies.
+
+4. Probar otro navegador.
+
+También verifica que la fecha y hora del dispositivo sean correctas.
+`
+},
+
+
+{
+id:7,
+category:"aplicaciones",
+tag:"TikTok",
+title:"Cómo guardar videos de TikTok en iPhone correctamente",
+desc:"Guía para usuarios de iOS que desean organizar sus archivos descargados.",
+content:`
+En iPhone algunos archivos descargados se guardan primero en la aplicación Archivos.
+
+Pasos:
+
+1. Copia el enlace del contenido.
+
+2. Procesa el archivo desde una herramienta compatible.
+
+3. Utiliza el menú compartir de Safari.
+
+4. Selecciona Guardar en Archivos o la opción disponible.
+
+Recuerda respetar los derechos de autor y utilizar contenido permitido.
+`
+},
+
+
+{
+id:8,
+category:"soluciones",
+tag:"Rendimiento",
+title:"Cómo acelerar un celular lento sin instalar aplicaciones",
+desc:"Ajustes sencillos para mejorar la respuesta del dispositivo.",
+content:`
+Para mejorar el rendimiento:
+
+1. Elimina aplicaciones que no utilizas.
+
+2. Reinicia el dispositivo periódicamente.
+
+3. Mantén suficiente espacio libre.
+
+4. Actualiza las aplicaciones importantes.
+
+Un teléfono con almacenamiento casi lleno suele funcionar más lento.
+`
+},
+
+
+{
+id:9,
+category:"soluciones",
+tag:"Seguridad",
+title:"Cómo detectar aplicaciones sospechosas en tu celular",
+desc:"Aprende señales comunes de aplicaciones poco confiables.",
+content:`
+Algunas señales de alerta:
+
+- Consumo excesivo de batería.
+- Muchos anuncios inesperados.
+- Permisos innecesarios.
+- Uso elevado de datos móviles.
+
+Revisa los permisos desde la configuración del sistema y elimina aplicaciones que no reconozcas.
+`
+},
+
+
+{
+id:10,
+category:"aplicaciones",
+tag:"Multimedia",
+title:"Cómo organizar videos y archivos para ahorrar espacio",
+desc:"Métodos para mantener tu almacenamiento ordenado.",
+content:`
+Una buena organización ayuda a evitar llenar la memoria:
+
+1. Crea carpetas por categorías.
+
+2. Elimina duplicados.
+
+3. Guarda archivos importantes en la nube.
+
+4. Revisa periódicamente la carpeta de descargas.
+
+Mantener ordenados tus archivos mejora la experiencia del dispositivo.
+`
+}
+
+];
